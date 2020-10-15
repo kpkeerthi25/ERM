@@ -1,13 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Tfjs from './src/Tfjs'
+
+import Emotion from './src/Emotion'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+     <Emotion/>
+  //   <View>
+  //     <Text>hello</Text>
+  //     <Tfjs/>
+
+  //   </View>
   );
 }
 

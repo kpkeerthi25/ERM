@@ -8,12 +8,27 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/image-editor": "^2.3.0",
+    "@tensorflow/tfjs-node": "^2.6.0",
+    "@tensorflow/tfjs-react-native": "^0.4.0",
+    "canvas": "^2.6.1",
     "expo": "~39.0.2",
+    "expo-camera": "~9.0.0",
+    "expo-face-detector": "~8.3.0",
+    "expo-gl": "~9.1.1",
+    "expo-gl-cpp": "~9.1.2",
+    "expo-image-manipulator": "~8.3.0",
+    "expo-media-library": "~9.2.1",
     "expo-status-bar": "~1.0.2",
+    "face-api.js": "^0.22.2",
+    "jpeg-js": "^0.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
-    "react-native-web": "~0.13.12"
+    "react-native-fs": "^2.16.6",
+    "react-native-web": "~0.13.12",
+    "expo-file-system": "~9.2.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
