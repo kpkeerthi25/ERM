@@ -1,35 +1,63 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
 
+import { StyleSheet } from "react-native";
 
-import TensorCamera from './src/TensorCamera'
+import TensorCamera from "./src/TensorCamera";
 
-import Emotion from './src/Emotion'
-import Face from './src/Face'
+import Home from "./src/Home";
 
+import Emotion from "./src/Emotion";
+import Face from "./src/Face";
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <View style={{ flex: 1 }}>
+//       <Text>hello</Text>
+//       <Face />
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });
+import * as React from "react";
+import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+function HomeScreen() {
   return (
-     //<Emotion/>
-     <View>
-    
-     <Face/>
-     </View>
-  //   <View>
-  //     <Text>hello</Text>
-  //     <Tfjs/>
-
-  //   </View>
-  //<MyComponent/>
+    <View style={{ flex: 1 }}>
+      <Text>hello</Text>
+      <Face />
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Lets Train!</Text>
+      <Home />
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
